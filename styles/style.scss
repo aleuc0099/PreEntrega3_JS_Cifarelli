@@ -28,7 +28,7 @@
     justify-content: center;
     align-items: center;
 
-    .presentation_box {
+    .introduction_box {
         width: 70%;
         // display: grid;
         text-align: center;
@@ -64,6 +64,36 @@
                 font-family: monospace;
                 font-size: 15px;
             }
+        }
+    }
+}
+
+.form_box{
+    margin-top: 30px;
+    margin-left: 10px;
+    #form_p{
+        margin-bottom: 5px;
+        color: blueviolet;
+        font-weight: 500;
+    }
+    .big_font{
+        margin-bottom: 5px;
+        color: blueviolet;
+        font-size: 100px;
+        font-weight: 500;
+    }
+    #name_form{
+        height: fit-content;
+        #name_input{
+            height: 30px;
+            width: 230px;
+        }
+        #submit_button{
+            height: 30px;
+            padding: 0 10px;
+        }
+        .off{
+            display: none;
         }
     }
 }

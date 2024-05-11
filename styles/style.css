@@ -28,19 +28,19 @@
   justify-content: center;
   align-items: center;
 }
-.container .presentation_box {
+.container .introduction_box {
   width: 70%;
   text-align: center;
 }
-.container .presentation_box #p_one {
+.container .introduction_box #p_one {
   font-size: 18px;
 }
-.container .presentation_box #more_info {
+.container .introduction_box #more_info {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.container .presentation_box #more_info a {
+.container .introduction_box #more_info a {
   margin: 0 5px;
   padding: 5px;
   color: blueviolet;
@@ -50,7 +50,7 @@
   font-family: monospace;
   font-size: 15px;
 }
-.container .presentation_box #more_info .over {
+.container .introduction_box #more_info .over {
   margin: 0 5px;
   padding: 5px;
   color: rgb(253, 234, 255);
@@ -60,4 +60,35 @@
   background-color: blueviolet;
   font-family: monospace;
   font-size: 15px;
+}
+
+.form_box {
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.form_box #form_p {
+  margin-bottom: 5px;
+  color: blueviolet;
+  font-weight: 500;
+}
+.form_box .big_font {
+  margin-bottom: 5px;
+  color: blueviolet;
+  font-size: 100px;
+  font-weight: 500;
+}
+.form_box #name_form {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.form_box #name_form #name_input {
+  height: 30px;
+  width: 230px;
+}
+.form_box #name_form #submit_button {
+  height: 30px;
+  padding: 0 10px;
+}
+.form_box #name_form .off {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
