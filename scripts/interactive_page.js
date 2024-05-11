@@ -48,3 +48,26 @@ form.addEventListener("submit", save_name);
 
 form.addEventListener("DOMContentLoaded", showName);
 //form_box ends
+
+//food_box starts
+const food_form = document.querySelector("#food_form")
+const food_input = document.querySelector("#food_input");
+const season_input = document.querySelector("#season_input");
+
+
+class Fav_food {
+    constructor(food, season) {
+        this.food = food;
+        this.season = season;
+    }
+}
+
+food_form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let fav_food = new Fav_food(food_input.value, season_input.value);
+    const enJSON = JSON.stringify(fav_food);
+    console.log(enJSON);
+    console.log(fav_food);
+    localStorage.setItem("fav_food", enJSON);
+});
+//food_box ends

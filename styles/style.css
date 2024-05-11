@@ -91,4 +91,20 @@
 }
 .form_box #name_form .off {
   display: none;
+}
+.form_box #food_form {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.form_box #food_form #food_input {
+  height: 30px;
+  width: 230px;
+}
+.form_box #food_form #season_input {
+  height: 30px;
+  width: 290px;
+}
+.form_box #food_form #food_button {
+  height: 30px;
+  padding: 0 10px;
 }/*# sourceMappingURL=style.css.map */

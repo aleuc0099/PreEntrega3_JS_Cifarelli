@@ -96,4 +96,20 @@
             display: none;
         }
     }
+
+    #food_form{
+        height: fit-content;
+        #food_input{
+            height: 30px;
+            width: 230px;
+        }
+        #season_input{
+            height: 30px;
+            width: 290px;
+        }
+        #food_button{
+            height: 30px;
+            padding: 0 10px;
+        }
+    }
 }
