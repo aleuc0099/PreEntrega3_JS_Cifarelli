@@ -40,7 +40,7 @@
   justify-content: center;
   align-items: center;
 }
-.container .presentation_box #more_info .out {
+.container .presentation_box #more_info a {
   margin: 0 5px;
   padding: 5px;
   color: blueviolet;
