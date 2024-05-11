@@ -42,17 +42,25 @@
             justify-content: center;
             align-items: center;
 
-            #p_two {
-                // margin-right: 4px;
-            }
-
-            a {
+            .out {
                 margin: 0 5px;
                 padding: 5px;
                 color: blueviolet;
                 text-decoration: none;
                 border: 1px solid #000;
                 border-radius: 10px;
+                font-family: monospace;
+                font-size: 15px;
+            }
+
+            .over {
+                margin: 0 5px;
+                padding: 5px;
+                color: rgb(253, 234, 255);
+                text-decoration: none;
+                border: 1px solid #000;
+                border-radius: 10px;
+                background-color: blueviolet;
                 font-family: monospace;
                 font-size: 15px;
             }
