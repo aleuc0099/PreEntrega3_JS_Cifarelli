@@ -95,6 +95,7 @@
 .form_box #food_form {
   height: -moz-fit-content;
   height: fit-content;
+  display: none;
 }
 .form_box #food_form #food_input {
   height: 30px;
@@ -107,4 +108,18 @@
 .form_box #food_form #food_button {
   height: 30px;
   padding: 0 10px;
+}
+.form_box #ffood_list_box {
+  margin-top: 20px;
+  display: none;
+}
+.form_box #ffood_list_box #ffood_title {
+  color: blueviolet;
+}
+.form_box #ffood_list_box #ffood_list {
+  margin-left: 30px;
+  list-style: none;
+}
+.form_box .appear {
+  display: block !important;
 }/*# sourceMappingURL=style.css.map */

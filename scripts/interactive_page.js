@@ -21,7 +21,7 @@ github_link.addEventListener("mouseout", () => {
 //introduction_box ends
 
 //form_box starts
-function showName() {
+function show_name() {
     let paragraph = document.querySelector("#form_p");
     let saved_name = localStorage.getItem("name");
     let submit_button = document.querySelector("#submit_button");
@@ -34,40 +34,54 @@ function showName() {
     } else {
         paragraph.textContent = "Hola visitante!"
     }
+    food_form.classList.toggle("appear");
 }
 
 function save_name(e) {
     e.preventDefault();
     let name = document.querySelector("#name_input").value;
-    localStorage.setItem("name", name);
-    showName();
+    if (confirm(`Es ${name} tu nombre correcto?`)) {
+        localStorage.setItem("name", name);
+        show_name();
+    }
 }
 
 let form = document.querySelector("#name_form");
 form.addEventListener("submit", save_name);
-
-form.addEventListener("DOMContentLoaded", showName);
+form.addEventListener("DOMContentLoaded", show_name);
 //form_box ends
 
 //food_box starts
 const food_form = document.querySelector("#food_form")
 const food_input = document.querySelector("#food_input");
 const season_input = document.querySelector("#season_input");
-
+const ffood_list = document.querySelector("#ffood_list");
+const ffood_list_box = document.querySelector("#ffood_list_box");
 
 class Fav_food {
     constructor(food, season) {
         this.food = food;
         this.season = season;
     }
+    show_ffood() {
+        ffood_list_box.classList = "appear";
+        let new_food_item = document.createElement("li");
+        ffood_list.appendChild(new_food_item);
+        new_food_item.textContent = this.food + " en " + this.season;
+    }
 }
 
+const ff_list = [];
 food_form.addEventListener("submit", (e) => {
     e.preventDefault();
     let fav_food = new Fav_food(food_input.value, season_input.value);
-    const enJSON = JSON.stringify(fav_food);
-    console.log(enJSON);
-    console.log(fav_food);
-    localStorage.setItem("fav_food", enJSON);
+    ff_list.push(fav_food);
+    const JSON_list = JSON.stringify(ff_list);
+    localStorage.setItem("fav_food_list", JSON_list);
+    if (ff_list.length <= 5) {
+        fav_food.show_ffood();
+    } else {
+        food_form.classList.toggle("appear");
+    }
 });
 //food_box ends
